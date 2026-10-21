@@ -1,0 +1,16 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; background: #edf0ed; color: #333; }
+header { background: #b45309; color: white; padding: 20px; text-align: center; border-bottom: 5px solid #78350f; }
+nav { display: flex; justify-content: center; gap: 20px; padding: 12px; background: #b45309; }
+nav a { color: white; text-decoration: none; font-weight: bold; }
+main { padding: 20px; max-width: 900px; margin: auto; }
+section { background: white; padding: 20px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 8px; }
+section img { width: 100%; max-width: 400px; border-radius: 8px; margin: 10px 0; border: 2px solid #ddd; }
+.menu-container { display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; }
+.menu-container article { border: 1px solid #ddd; padding: 10px; width: 250px; text-align: center; border-radius: 8px; background: #fff; }
+.menu-container article img { width: 100%; height: 180px; object-fit: cover; }
+footer { background: #333; color: white; text-align: center; padding: 15px; }
+.modal { display: none; position: fixed; z-index: 10; inset: 0; padding: 60px 20px 20px; overflow: auto; background: rgba(0, 0, 0, 0.9); }
+.modal-content { display: block; max-width: min(90vw, 1000px); max-height: 85vh; width: auto; height: auto; margin: 0 auto; object-fit: contain; }
+.close { position: absolute; top: 15px; right: 25px; color: white; font-size: 40px; font-weight: bold; line-height: 1; cursor: pointer; }
+.close:hover, .close:focus { color: #bbb; }

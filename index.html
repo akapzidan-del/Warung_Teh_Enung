@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Warung Jajan Teh Enung - Bojong</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Warung Jajan Teh Enung</h1>
+  <p>Asli Kampung Bojong, Citeureup - Jajanan Enak Harga Rakyat</p>
+</header>
+
+<nav>
+  <a href="#tentang">Tentang</a>
+  <a href="#menu">Menu</a>
+  <a href="#kontak">Pesan</a>
+</nav>
+
+<main>
+  <section id="tentang">
+    <h2>Pemilik Warung</h2>
+    <p> ENUNG ROSMWATI</p>
+    
+    <p>Warung jajanan tradisional asli Bojong buka setiap pagi jam 08.00 - 16.00. Semua kue dibuat fresh setiap hari tersedia aneka jajanan yang enak dan bikin kenyang cocok untuk sarapan pagi .</p>
+    <img src="lapak-enung.jpg.jpeg" alt="Foto asli lapak Teh Enung">
+  </section>
+
+  <section id="menu">
+    <h2>Menu Jajanan</h2>
+    <div class="menu-container">
+      <article>
+        <img src="jajan-lengkap.jpg.jpeg" alt="Foto asli jajan lengkap">
+        <h3>Jajan Lengkap</h3>
+        <p>Mulai Rp 2.000</p>
+      </article>
+      <article>
+        <img src="bolu-gulung.jpg.jpeg" alt="Foto asli bolu gulung dan kue">
+        <h3>Bolu & Roll Cake</h3>
+        <p>Mulai Rp 5.000</p>
+      </article>
+      <article>
+        <img src="lapak-enung.jpg.jpeg" alt="Foto asli lapak Teh Enung">
+        <h3>Lapak Pagi</h3>
+        <p>Buka 08.00 - 16.00</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="kontak">
+    <h2>Kontak Pesan</h2>
+    <p>📍 Kampung Bojong, Citeureup</p>
+    <p>📱 WA: 085163536393</p>
+
+    <form>
+      <label>Nama:</label>
+      <input type="text" placeholder="Nama kamu" required>
+
+      <label>Email:</label>
+      <input type="email" placeholder="email@gmail.com" required>
+
+      <label>Pesanan:</label>
+      <select required>
+        <option value="">-- Pilih Jajan --</option>
+        <option>Risol Mayo</option>
+        <option>Bolu Gulung</option>
+        <option>Bolu kukus</option>
+      </select>
+
+      <label>Catatan:</label>
+      <textarea placeholder="Mau pesan berapa?"></textarea>
+
+      <button type="submit">Pesan Sekarang</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>© 2026 Warung Jajan Teh Enung - Asli Kampung Bojong</p>
+</footer>
+
+
+<div id="zoomModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="zoomedImg">
+</div>
+
+<script>
+const modal = document.getElementById("zoomModal");
+const modalImg = document.getElementById("zoomedImg");
+document.querySelectorAll('#menu img, #tentang img').forEach(img => {
+  img.style.cursor = "zoom-in";
+  img.addEventListener('click', function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+  });
+});
+document.querySelector('.close').onclick = function() { 
+  modal.style.display = "none"; 
+}
+modal.onclick = function(e) {
+  if (e.target == modal) modal.style.display = "none";
+}
+</script>
+
+</body>
+</html>
